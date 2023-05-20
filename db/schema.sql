@@ -11,7 +11,7 @@ CREATE TABLE role (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30),
     salary DECIMAL,
-    dept_id INTEGER
+    department_id INTEGER
 );
 
 CREATE TABLE employee (
@@ -21,5 +21,4 @@ CREATE TABLE employee (
     role_id INTEGER,
     manager_id INTEGER,
     FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE SET NULL
-
 );
