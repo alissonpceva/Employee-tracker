@@ -1,6 +1,6 @@
 const express = require('express');
-// Import and require mysql2
 const mysql = require('mysql2');
+const inquirer = require('inquirer');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -72,6 +72,13 @@ function displayMainMenu() {
         }
       });
   }
+
+  // Verify code execution
+console.log('Before calling displayMainMenu()');
+displayMainMenu();
+console.log('After calling displayMainMenu()');
+
+module.exports = db;
   
   // Implement the required functionality for each option
   function viewAllDepartments() {
@@ -265,5 +272,3 @@ function displayMainMenu() {
       });
     });
   }
-
-module.exports = db;
